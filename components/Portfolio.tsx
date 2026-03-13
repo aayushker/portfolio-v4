@@ -45,9 +45,9 @@ export function Portfolio({ experiences, projects }: PortfolioProps) {
 
   return (
     <div className="h-dvh w-screen flex flex-col overflow-hidden bg-crt-black">
-      <CRTOverlay />
-
       <div className="flex flex-col h-full w-full crt-frame border-x border-crt-border bg-crt-bg animate-flicker relative z-10">
+        <CRTOverlay />
+
         {/* ═══ TOP PANEL (fixed) ═══ */}
         <div className="shrink-0">
           <TopPanel />
@@ -56,12 +56,12 @@ export function Portfolio({ experiences, projects }: PortfolioProps) {
         {/* ═══ MIDDLE PANEL (fills remaining space) ═══ */}
         <div className="flex-1 flex flex-col md:flex-row border-b border-t border-crt-border min-h-0 overflow-hidden">
           {/* Left: Profile Image */}
-          <div className="hidden md:block md:w-[38%] lg:w-[35%] border-r border-crt-border shrink-0 overflow-hidden">
+          <div className="relative z-30 hidden md:block md:w-[38%] lg:w-[35%] border-r border-crt-border shrink-0 overflow-hidden">
             <ProfileImage />
           </div>
 
           {/* Right: Navigation + Content */}
-          <div className="flex-1 flex flex-col min-h-0 min-w-0 p-4">
+          <div className="relative z-30 flex-1 flex flex-col min-h-0 min-w-0 p-4">
             {/* Tagline (pinned) */}
             <h2 className="shrink-0 text-base sm:text-lg md:text-xl font-medium text-crt-text-bright leading-snug tracking-wide text-glow">
               {siteConfig.tagline}

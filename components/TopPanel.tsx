@@ -26,7 +26,7 @@ export function TopPanel() {
         <span className="text-sm sm:text-base tracking-[0.2em] text-white font-semibold text-glow-sm">
           {siteConfig.name}
         </span>
-        <span className="text-[10px] sm:text-xs tracking-wider text-crt-text-dim text-center uppercase">
+        <span className="text-[10px] sm:text-xs tracking-wider text-crt-text text-center uppercase font-medium text-glow-sm">
           {siteConfig.signal}
         </span>
         <div className="flex justify-end">
@@ -35,7 +35,7 @@ export function TopPanel() {
             height="14"
             viewBox="0 0 24 14"
             fill="none"
-            className="text-crt-text-muted"
+            className="text-crt-text"
           >
             <rect
               x="0.5"
@@ -70,7 +70,7 @@ export function TopPanel() {
       {/* Row 2: Role + Date + Skill Matrix */}
       <div className="flex items-start justify-between px-4 py-3">
         <div>
-          <div className="text-[10px] sm:text-xs tracking-[0.2em] text-crt-text-muted uppercase mb-1.5 font-medium">
+          <div className="text-[10px] sm:text-xs tracking-[0.2em] text-crt-text uppercase mb-1.5 font-semibold text-glow-sm">
             {siteConfig.role}
           </div>
           <div className="text-2xl sm:text-3xl font-normal tracking-wider text-white text-glow-bright animate-text-flicker">

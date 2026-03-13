@@ -8,7 +8,10 @@ function getProgressBar(level: number, max: number = 10): string {
   return "*".repeat(level) + "*".repeat(max - level);
 }
 
-function getFilledBar(level: number, max: number = 10): { filled: string; empty: string } {
+function getFilledBar(
+  level: number,
+  max: number = 10,
+): { filled: string; empty: string } {
   return { filled: "*".repeat(level), empty: "*".repeat(max - level) };
 }
 
@@ -18,15 +21,15 @@ export function SkillMatrix() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % skills.length);
-    }, 2500);
+    }, 5500);
     return () => clearInterval(interval);
   }, []);
 
   const skill = skills[index];
 
   return (
-    <div className="text-right min-w-[180px] sm:min-w-[230px]">
-      <div className="text-[9px] sm:text-[10px] tracking-[0.15em] text-crt-text-dim uppercase mb-1">
+    <div className="text-right min-w-[200px] sm:min-w-[250px]">
+      <div className="text-[3px] sm:text-xs tracking-[0.18em] text-crt-text uppercase mb-1.5 font-semibold text-glow-sm">
         SKILL
       </div>
       <AnimatePresence mode="wait">
@@ -38,14 +41,14 @@ export function SkillMatrix() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className="font-mono"
         >
-          <div className="text-[10px] sm:text-xs tracking-wider text-crt-text-muted uppercase mb-0.5">
+          <div className="text-xs sm:text-sm tracking-[0.14em] text-crt-text-bright uppercase mb-1 font-semibold text-glow-sm">
             {skill.name}
           </div>
-          <div className="text-xs sm:text-sm flex items-center justify-end gap-1">
-            <span className="text-crt-text-bright text-glow-sm tracking-[0.1em]">
+          <div className="text-xs sm:text-base flex items-center justify-end gap-1.5">
+            <span className="text-crt-text-bright text-glow-sm tracking-[0.14em]">
               {getFilledBar(skill.level).filled}
             </span>
-            <span className="text-crt-text-dim tracking-[0.1em]">
+            <span className="text-crt-text tracking-[0.14em]">
               {getFilledBar(skill.level).empty}
             </span>
           </div>
