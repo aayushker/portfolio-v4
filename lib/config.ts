@@ -1,4 +1,4 @@
-import type { Skill, NavItem, SkillGroup } from "./types";
+import type { Skill, NavItem, SkillGroup, SectionId } from "./types";
 
 export const siteConfig = {
   name: "AAYUSHKER SINGH",
@@ -31,6 +31,15 @@ export const navItems: NavItem[] = [
   { id: "contact", label: "Contact" },
   { id: "resume", label: "Resume" },
 ];
+
+export const sectionHeadlines: Record<SectionId, string> = {
+  about: "Building intelligent systems that bridge complexity with usability.",
+  experience: "Mission logs from high-impact engineering and AI execution.",
+  projects: "Field-tested builds designed for speed, reliability, and scale.",
+  expertise: "Capability matrix of core systems, AI, and modern stack depth.",
+  contact: "Open channel for collaborations, builds, and serious opportunities.",
+  resume: "Verified dossier of work, wins, and production-ready capabilities.",
+};
 
 export const skillGroups: SkillGroup[] = [
   {
