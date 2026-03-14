@@ -22,11 +22,11 @@ export function TopPanel() {
   return (
     <div className="border-b border-crt-border">
       {/* Row 1: Name + Signal + Battery */}
-      <div className="grid grid-cols-3 items-center px-4 py-2.5 border-b border-crt-border">
-        <span className="text-sm sm:text-base tracking-[0.2em] text-white font-semibold text-glow-sm">
+      <div className="grid grid-cols-3 items-center px-3 sm:px-4 py-2 sm:py-2.5 border-b border-crt-border">
+        <span className="font-display text-[11px] sm:text-[13px] tracking-[0.24em] text-crt-text-bright font-medium text-glow-sm leading-none uppercase">
           {siteConfig.name}
         </span>
-        <span className="text-[10px] sm:text-xs tracking-wider text-crt-text text-center uppercase font-medium text-glow-sm">
+        <span className="font-display text-[10px] sm:text-[11px] tracking-[0.2em] text-crt-text-bright text-center uppercase font-medium text-glow-sm leading-none">
           {siteConfig.signal}
         </span>
         <div className="flex justify-end">
@@ -35,7 +35,7 @@ export function TopPanel() {
             height="14"
             viewBox="0 0 24 14"
             fill="none"
-            className="text-crt-text"
+            className="text-crt-text-bright"
           >
             <rect
               x="0.5"
@@ -68,12 +68,12 @@ export function TopPanel() {
       </div>
 
       {/* Row 2: Role + Date + Skill Matrix */}
-      <div className="flex items-start justify-between px-4 py-3">
-        <div>
-          <div className="text-[10px] sm:text-xs tracking-[0.2em] text-crt-text uppercase mb-1.5 font-semibold text-glow-sm">
+      <div className="flex items-start justify-between gap-3 px-3 sm:px-4 py-2 sm:py-2.5">
+        <div className="min-w-0">
+          <div className="font-display text-[9px] sm:text-[11px] tracking-[0.24em] text-crt-text-bright uppercase mb-1 font-semibold text-glow-sm">
             {siteConfig.role}
           </div>
-          <div className="text-2xl sm:text-3xl font-normal tracking-wider text-white text-glow-bright animate-text-flicker">
+          <div className="font-display text-[34px] sm:text-[45px] leading-none font-medium tracking-[0.11em] text-white text-glow-bright animate-text-flicker whitespace-nowrap">
             {date}
           </div>
         </div>
