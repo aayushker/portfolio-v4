@@ -4,16 +4,7 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { skills } from "@/lib/config";
 
-function getProgressBar(level: number, max: number = 10): string {
-  return "*".repeat(level) + "*".repeat(max - level);
-}
-
-function getFilledBar(
-  level: number,
-  max: number = 10,
-): { filled: string; empty: string } {
-  return { filled: "*".repeat(level), empty: "*".repeat(max - level) };
-}
+const MAX_LEVEL = 10;
 
 export function SkillMatrix() {
   const [index, setIndex] = useState(0);
@@ -26,10 +17,11 @@ export function SkillMatrix() {
   }, []);
 
   const skill = skills[index];
+  const safeLevel = Math.min(Math.max(skill.level, 0), MAX_LEVEL);
 
   return (
-    <div className="text-right min-w-[200px] sm:min-w-[250px]">
-      <div className="text-[3px] sm:text-xs tracking-[0.18em] text-crt-text uppercase mb-1.5 font-semibold text-glow-sm">
+    <div className="text-right min-w-[158px] sm:min-w-[186px] pt-0.5">
+      <div className="font-display text-[9px] sm:text-[10px] tracking-[0.22em] text-crt-text-bright uppercase mb-0.5 font-semibold text-glow-sm">
         SKILL
       </div>
       <AnimatePresence mode="wait">
@@ -39,17 +31,29 @@ export function SkillMatrix() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -6 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="font-mono"
+          className="font-display"
         >
-          <div className="text-xs sm:text-sm tracking-[0.14em] text-crt-text-bright uppercase mb-1 font-semibold text-glow-sm">
+          <div className="text-[9px] sm:text-[11px] tracking-[0.16em] text-crt-text-bright uppercase mb-1 font-semibold text-glow-sm">
             {skill.name}
           </div>
-          <div className="text-xs sm:text-base flex items-center justify-end gap-1.5">
-            <span className="text-crt-text-bright text-glow-sm tracking-[0.14em]">
-              {getFilledBar(skill.level).filled}
+          <div className="flex items-center justify-end gap-1.5 leading-none">
+            <span className="flex items-center gap-[2px]">
+              {Array.from({ length: MAX_LEVEL }).map((_, i) => {
+                const isFilled = i < safeLevel;
+                return (
+                  <span
+                    key={i}
+                    className={`inline-block h-[8px] sm:h-[9px] w-[5px] sm:w-[6px] border ${
+                      isFilled
+                        ? "bg-crt-text-bright border-crt-text-bright/85 shadow-[0_0_4px_rgba(233,244,250,0.45)]"
+                        : "bg-transparent border-crt-border-bright/70"
+                    }`}
+                  />
+                );
+              })}
             </span>
-            <span className="text-crt-text tracking-[0.14em]">
-              {getFilledBar(skill.level).empty}
+            <span className="text-[9px] sm:text-[10px] tracking-[0.12em] text-crt-text-bright">
+              {skill.level}/10
             </span>
           </div>
         </motion.div>
