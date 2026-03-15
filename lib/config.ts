@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "AAYUSHKER SINGH",
   role: "SOFTWARE DEVELOPER",
   signal: "SIGNAL STABLE",
-  email: "hello@aayushker.dev",
+  email: "singhaayushker@gmail.com",
   github: "https://github.com/aayushker",
   linkedin: "https://linkedin.com/in/aayushker",
   bio: "Aayushker Singh is a full-stack developer focused on backend systems, generative AI applications, and intelligent data architectures. His work combines scalable engineering with modern AI techniques to build tools that solve real-world developer and product challenges.",
