@@ -31,8 +31,12 @@ export function ContactSection() {
       className="space-y-4"
     >
       <div className="font-display tracking-[0.17em] uppercase flex items-center gap-2 mb-4">
-        <span className="text-[11px] text-crt-text-bright text-glow-sm">CONTACT</span>
-        <span className="text-[10px] text-crt-text-dim">COMMUNICATION CHANNELS</span>
+        <span className="text-[11px] text-crt-text-bright text-glow-sm">
+          CONTACT
+        </span>
+        <span className="text-[10px] text-crt-text-dim">
+          COMMUNICATION CHANNELS
+        </span>
       </div>
 
       <div className="space-y-2.5">
