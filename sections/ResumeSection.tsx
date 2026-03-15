@@ -12,8 +12,12 @@ export function ResumeSection() {
       className="space-y-4"
     >
       <div className="font-display tracking-[0.17em] uppercase flex items-center gap-2 mb-4">
-        <span className="text-[11px] text-crt-text-bright text-glow-sm">RESUME</span>
-        <span className="text-[10px] text-crt-text-dim">DOCUMENT RETRIEVAL</span>
+        <span className="text-[11px] text-crt-text-bright text-glow-sm">
+          RESUME
+        </span>
+        <span className="text-[10px] text-crt-text-dim">
+          DOCUMENT RETRIEVAL
+        </span>
       </div>
 
       <p className="text-xs sm:text-sm text-crt-text leading-relaxed tracking-wide">

@@ -13,7 +13,9 @@ export function TechExpertiseSection() {
       className="space-y-4"
     >
       <div className="font-display tracking-[0.17em] uppercase flex items-center gap-2 mb-4">
-        <span className="text-[11px] text-crt-text-bright text-glow-sm">TECHNICAL EXPERTISE</span>
+        <span className="text-[11px] text-crt-text-bright text-glow-sm">
+          TECHNICAL EXPERTISE
+        </span>
         <span className="text-[10px] text-crt-text-dim">CAPABILITY MATRIX</span>
       </div>
 
