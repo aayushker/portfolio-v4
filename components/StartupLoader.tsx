@@ -33,10 +33,10 @@ export function StartupLoader({ phase, visible }: StartupLoaderProps) {
             </div>
             <div className="text-[10px] sm:text-xs tracking-[0.16em] uppercase text-crt-text-muted">
               {phase === "searching"
-                ? "Scanning Coordinates // Verifying Signal"
+                ? "Scanning Coordinates — Verifying Signal"
                 : phase === "locking"
-                  ? "Aligning Hemisphere // Establishing Pinpoint"
-                  : "Coordinates Locked // Routing Interface"}
+                  ? "Aligning Hemisphere — Establishing Pinpoint"
+                  : "Coordinates Locked — Routing Interface"}
             </div>
           </div>
 
@@ -52,7 +52,7 @@ export function StartupLoader({ phase, visible }: StartupLoaderProps) {
         </div>
 
         <div className="pointer-events-none absolute bottom-6 right-6 text-[10px] uppercase tracking-[0.22em] text-crt-text-dim/80">
-          Geo Relay // Secure Channel
+          Geo Relay — Secure Channel
         </div>
       </div>
     </div>
