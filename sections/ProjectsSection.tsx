@@ -16,8 +16,9 @@ export function ProjectsSection({ entries }: Props) {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="space-y-4"
     >
-      <div className="text-xs tracking-[0.15em] text-crt-text-dim uppercase">
-        PROJECTS // ACTIVE DEPLOYMENTS
+      <div className="font-display tracking-[0.17em] uppercase flex items-center gap-2 mb-4">
+        <span className="text-[11px] text-crt-text-bright text-glow-sm">PROJECTS</span>
+        <span className="text-[10px] text-crt-text-dim">ACTIVE DEPLOYMENTS</span>
       </div>
 
       {entries.length === 0 ? (
