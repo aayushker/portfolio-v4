@@ -12,8 +12,9 @@ export function TechExpertiseSection() {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="space-y-4"
     >
-      <div className="text-xs tracking-[0.15em] text-crt-text-dim uppercase">
-        TECHNICAL EXPERTISE // CAPABILITY MATRIX
+      <div className="font-display tracking-[0.17em] uppercase flex items-center gap-2 mb-4">
+        <span className="text-[11px] text-crt-text-bright text-glow-sm">TECHNICAL EXPERTISE</span>
+        <span className="text-[10px] text-crt-text-dim">CAPABILITY MATRIX</span>
       </div>
 
       <div className="space-y-3">

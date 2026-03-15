@@ -11,8 +11,9 @@ export function ResumeSection() {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="space-y-4"
     >
-      <div className="text-xs tracking-[0.15em] text-crt-text-dim uppercase">
-        RESUME // DOCUMENT RETRIEVAL
+      <div className="font-display tracking-[0.17em] uppercase flex items-center gap-2 mb-4">
+        <span className="text-[11px] text-crt-text-bright text-glow-sm">RESUME</span>
+        <span className="text-[10px] text-crt-text-dim">DOCUMENT RETRIEVAL</span>
       </div>
 
       <p className="text-xs sm:text-sm text-crt-text leading-relaxed tracking-wide">
