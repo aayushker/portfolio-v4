@@ -50,9 +50,9 @@ export function ResumeSection() {
         [ DOWNLOAD RESUME.PDF ]
       </a>
 
-      <p className="text-[9px] text-crt-text-dim tracking-wider">
+      {/* <p className="text-[9px] text-crt-text-dim tracking-wider">
         Place resume at: /public/resume.pdf
-      </p>
+      </p> */}
     </motion.div>
   );
 }
