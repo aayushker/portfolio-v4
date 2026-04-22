@@ -1,5 +1,5 @@
 ---
-company: "Opinium AI"
+company: "Augur.bot"
 role: "GenAI Intern"
 duration: "Jun 2025 – Present"
 description: "Acted as a founding engineer for a production-grade AI analytics platform serving paying clients, architecting end-to-end data flow, ingestion layers, database schema, and backend APIs from scratch."

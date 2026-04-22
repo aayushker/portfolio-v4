@@ -2,6 +2,8 @@
 title: "DevFoolU"
 type: "Next.js + FastAPI Plagiarism Detection"
 description: "Built an end-to-end plagiarism detection system for 200,000+ hackathon submissions, with 3x faster data ingestion and 28% higher detection accuracy using contextual semantic analysis."
+problem: "Hackathon reviewers needed a scalable and accurate way to detect cross-language plagiarism across massive submission volumes."
+role: "Designed and shipped the full-stack detection platform, including ingestion automation, semantic analysis, and review workflows."
 date: "October 2024"
 stack:
   - "Next.js"

@@ -2,6 +2,8 @@
 title: "Foody"
 type: "Full Stack"
 description: "Designed and deployed a recipe management platform hosting 100,000+ unique recipes, with interactive search and personalization features that boosted engagement metrics by 25%."
+problem: "Recipe discovery and personalization were fragmented, reducing repeat engagement and making relevant results hard to surface quickly."
+role: "Led full-stack implementation spanning product UI, recommendation logic, API workflows, and database performance tuning."
 date: "July 2024"
 stack:
   - "Next.js"
